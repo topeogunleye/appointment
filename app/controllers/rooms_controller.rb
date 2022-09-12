@@ -5,7 +5,10 @@ class RoomsController < ApplicationController
   end
 
   def show
+  end
 
+  def new
+    @room = Room.new
   end
 
   private
