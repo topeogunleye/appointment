@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :set_room, only: [:show]
+  before_action :set_room, only: [:show, :edit]
   def index
     @rooms = Room.all
   end
@@ -20,6 +20,10 @@ class RoomsController < ApplicationController
         format.html { render :new, status: :unprocessable_entity }
       end
     end
+  end
+
+  def edit
+    @room = Room.new
   end
 
   private
